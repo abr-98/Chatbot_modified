@@ -15,7 +15,10 @@ def swap_pronouns(phrase):
 		return phrase
 
 def filter_command(phrase):
-	tokens=word_tokenize(phrase)
+	tokens=[]
+	tok=word_tokenize(phrase)
+	for t in tok:
+		tokens.append(tok.lower())
 	tags = nltk.pos_tag(tokens)
 
 	work=[]
@@ -40,10 +43,8 @@ def filter_command(phrase):
 		work_f.append(lem.lemmatize(w.lower()))
 	if query:
 		if "you" in tokens or "your" in tokens:
-			if "VB" in nltk.pos_tag(tokens[0])[1]:
-				task=1
 			task=0
-		if 'weather' not in tokens or 'news' not in tokens or 'headlines' not in tokens: 
+		elif 'weather' not in tokens or 'news' not in tokens or 'headlines' not in tokens: 
 			task=1
 	elif 'play' in work_f or 'song' in subject or 'play' in subject:
 		task=2
@@ -55,7 +56,7 @@ def filter_command(phrase):
 		task=5
 	else:
 		
-		if '?' in tokens:
+		if '?' in tokens and 'you' not in tokens and 'your' not in tokens:
 			task=1
 		else:
 			task=0	
