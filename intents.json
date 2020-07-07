@@ -1,0 +1,41 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello", "Good to see you", "Hi there"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "introduction",
+         "patterns": ["My name is","I am","Myself"],
+         "responses": ["I am Chatter","Myself Chatter","My name is chatter"],
+         "context": [""]
+        },
+        {"tag": "identity",
+         "patterns": ["Who are you","Tell something about you","Describe Your self"],
+         "responses": ["I am Chatter, a research based chatbot developed by Abhijit Roy"],
+         "context": [""]
+        },
+        {"tag": "capability",
+         "patterns": ["What are your capabilities?","What Can you do"],
+         "responses": ["I can perform basic tasks like playing songs, helping to order something, book a flight, gist newspaper headlines, answer query about weather and things."],
+         "context": [""]
+        }
+
+
+        ]
+
+}
