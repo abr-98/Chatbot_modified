@@ -10,7 +10,7 @@ def model_c():
 	model = Sequential()
 	model.add(Dense(32, input_shape=(len(X[0]),), activation='relu'))
 	model.add(Dropout(0.2))
-	model.add(Dense(64, input_shape=(len(X[0]),), activation='relu'))
+	model.add(Dense(64, activation='relu'))
 	model.add(Dropout(0.3))
 	model.add(Dense(128, activation='relu'))
 	model.add(Dropout(0.3))
