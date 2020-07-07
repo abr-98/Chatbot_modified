@@ -232,7 +232,7 @@ def book(message):
             webbrowser.open(url,new=1)
 
 def get_weather():
-	api_key = "3fde248dfc251d2e2770c78bfee66975"
+	api_key = "***********************************"
 	base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
 	print("Enter the city please")
